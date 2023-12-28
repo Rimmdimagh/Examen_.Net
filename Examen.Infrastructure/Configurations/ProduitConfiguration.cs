@@ -24,10 +24,12 @@ namespace Examen.Infrastructure.Configurations
             builder.HasMany(f => f.fournisseurs).WithMany(p => p.produits)
                 .UsingEntity(p => p.ToTable("Facture"));
             //Fluent API question b:
-            builder.HasDiscriminator<char>("TypeProduit")
+            builder.HasDiscriminator<char>("Discriminator")
                 .HasValue<Produit>('P')
                 .HasValue<Chimique>('C')
                 .HasValue<Biologique>('B');
+
+            
 
 
         }

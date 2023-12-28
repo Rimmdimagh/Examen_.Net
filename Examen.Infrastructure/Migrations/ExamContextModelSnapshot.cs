@@ -157,7 +157,7 @@ namespace Examen.Infrastructure.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.HasDiscriminator().HasValue("Biologique");
+                    b.HasDiscriminator().HasValue("B");
                 });
 
             modelBuilder.Entity("Examen.ApplicationCore.Domain.Chimique", b =>
@@ -174,7 +174,7 @@ namespace Examen.Infrastructure.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.HasDiscriminator().HasValue("Chimique");
+                    b.HasDiscriminator().HasValue("C");
                 });
 
             modelBuilder.Entity("Examen.ApplicationCore.Domain.Produit", b =>
